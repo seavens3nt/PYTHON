@@ -1,0 +1,124 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": []
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "code",
+      "execution_count": 5,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "FWTv8URxnxf_",
+        "outputId": "51ea87fc-ba87-4484-bf96-3c41d2576ac4"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "\n",
+            "Enter details for student 1:\n",
+            "Enter student's name: ranee\n",
+            "Enter student's age: 18\n",
+            "Enter student's birthdate (YYYY-MM-DD): 2006-07-09\n",
+            "\n",
+            "Enter details for student 2:\n",
+            "Enter student's name: jared\n",
+            "Enter student's age: 18\n",
+            "Enter student's birthdate (YYYY-MM-DD): 2006-06-22\n",
+            "\n",
+            "Enter details for student 3:\n",
+            "Enter student's name: riley\n",
+            "Enter student's age: 18\n",
+            "Enter student's birthdate (YYYY-MM-DD): 2006-05-27\n",
+            "\n",
+            "Enter details for student 4:\n",
+            "Enter student's name: irv\n",
+            "Enter student's age: 18\n",
+            "Enter student's birthdate (YYYY-MM-DD): 2006-08-09\n",
+            "\n",
+            "Enter details for student 5:\n",
+            "Enter student's name: migz\n",
+            "Enter student's age: 18\n",
+            "Enter student's birthdate (YYYY-MM-DD): 2006-22-09\n",
+            "\n",
+            "Student Information:\n",
+            "\n",
+            "Student 1:\n",
+            "Name: ranee\n",
+            "Age: 18\n",
+            "Birthdate: 2006-07-09\n",
+            "Category: Teenager\n",
+            "\n",
+            "Student 2:\n",
+            "Name: jared\n",
+            "Age: 18\n",
+            "Birthdate: 2006-06-22\n",
+            "Category: Teenager\n",
+            "\n",
+            "Student 3:\n",
+            "Name: riley\n",
+            "Age: 18\n",
+            "Birthdate: 2006-05-27\n",
+            "Category: Teenager\n",
+            "\n",
+            "Student 4:\n",
+            "Name: irv\n",
+            "Age: 18\n",
+            "Birthdate: 2006-08-09\n",
+            "Category: Teenager\n",
+            "\n",
+            "Student 5:\n",
+            "Name: migz\n",
+            "Age: 18\n",
+            "Birthdate: 2006-22-09\n",
+            "Category: Teenager\n"
+          ]
+        }
+      ],
+      "source": [
+        "\n",
+        "students = []\n",
+        "\n",
+        "for i in range(5):\n",
+        "    print(f\"\\nEnter details for student {i + 1}:\")\n",
+        "    name = input(\"Enter student's name: \")\n",
+        "    age = int(input(\"Enter student's age: \"))\n",
+        "    birthdate = input(\"Enter student's birthdate (YYYY-MM-DD): \")\n",
+        "\n",
+        "    if 13 <= age <= 19:\n",
+        "        category = \"Teenager\"\n",
+        "    else:\n",
+        "        category = \"Adult\"\n",
+        "\n",
+        "    students.append({\n",
+        "        'name': name,\n",
+        "        'age': age,\n",
+        "        'birthdate': birthdate,\n",
+        "        'category': category\n",
+        "    })\n",
+        "\n",
+        "print(\"\\nStudent Information:\")\n",
+        "for i, student in enumerate(students, 1):\n",
+        "    print(f\"\\nStudent {i}:\")\n",
+        "    print(f\"Name: {student['name']}\")\n",
+        "    print(f\"Age: {student['age']}\")\n",
+        "    print(f\"Birthdate: {student['birthdate']}\")\n",
+        "    print(f\"Category: {student['category']}\")\n"
+      ]
+    }
+  ]
+}
